@@ -2,6 +2,18 @@ import colors from 'vuetify/es5/util/colors'
 
 export default {
   mode: 'universal',
+  generate: {
+    routes: function() {
+      const fs = require('fs');
+      const path = require('path');
+      return fs.readdirSync('./assets/content/blog').map(file => {
+        return {
+          route: `/blog/${path.parse(file).name}`, // Return the slug
+          payload: require(`./assets/content/blog/${file}`),
+        };
+      });
+    },
+  },
   /*
   ** Headers of the page
   */
@@ -40,18 +52,9 @@ export default {
   /*
   ** Nuxt.js modules
   */
-  modules: [
-    // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios',
-    '@nuxtjs/pwa',
-    // Doc: https://github.com/nuxt-community/dotenv-module
-    '@nuxtjs/dotenv',
-  ],
-  /*
-  ** Axios module configuration
-  ** See https://axios.nuxtjs.org/options
-  */
-  axios: {
+  modules: ['@nuxtjs/markdownit'],
+  markdownit: {
+    injected: true,
   },
   /*
   ** vuetify module configuration
