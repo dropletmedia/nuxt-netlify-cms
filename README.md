@@ -1,6 +1,6 @@
 # droplet3
 
-> Nuxt-netlify proj
+> Server Side rendered CMS template using Vue + Vuetify + Vuex + Nuxt + Netlify 
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/35889bb9-4ce6-493d-8de9-01dbbbf5c567/deploy-status)](https://app.netlify.com/sites/droplet-cms/deploys)
 
@@ -24,3 +24,5 @@ $ yarn generate
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+
+More on this setup [here](https://www.netlifycms.org/docs/nuxt/)
