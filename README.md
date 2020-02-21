@@ -4,7 +4,7 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/35889bb9-4ce6-493d-8de9-01dbbbf5c567/deploy-status)](https://app.netlify.com/sites/droplet-cms/deploys)
 
-
+[Example site](https://droplet-cms.netlify.com/)
 
 ## Build Setup
 
